@@ -1,0 +1,53 @@
+{
+  "name": "array-2-object",
+  "version": "1.0.2",
+  "description": "Returns a new object from a given array",
+  "main": "index.js",
+  "scripts": {
+    "tape": "tape test/*.js",
+    "babel": "babel src -d .",
+    "push": "git commit -a -m",
+    "posttest": "npm run coverage",
+    "postpush": "git push origin master",
+    "test": "npm run babel && nyc npm run tape",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "clean": "rimraf index.js test coverage .nyc_output coverage.lcov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrzmmr/array-2-object.git"
+  },
+  "keywords": [
+    "array-to-object",
+    "array",
+    "to",
+    "object",
+    "2",
+    "array-2-object"
+  ],
+  "author": "mrzmmr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrzmmr/array-2-object/issues"
+  },
+  "homepage": "https://github.com/mrzmmr/array-2-object#readme",
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "dependencies": {
+    "lodash.defaultsdeep": "^4.6.0",
+    "lodash.isarray": "^4.0.0",
+    "lodash.isfunction": "^3.0.8",
+    "lodash.isobject": "^3.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-env": "^1.1.8",
+    "codecov": "^1.0.1",
+    "nyc": "^10.1.2",
+    "rimraf": "^2.5.4",
+    "tape": "^4.6.3"
+  }
+}

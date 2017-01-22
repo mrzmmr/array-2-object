@@ -1,6 +1,6 @@
 {
   "name": "array-2-object",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Returns a new object from a given array",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "babel": "babel src -d .",
     "posttest": "npm run coverage",
     "test": "npm run babel && nyc npm run tape",
-    "prepublish": "npm run clean && npm t && npm run clean",
+    "prepublish": "npm t && npm run clean && npm run babel",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "clean": "rimraf index.js test coverage .nyc_output coverage.lcov"
   },

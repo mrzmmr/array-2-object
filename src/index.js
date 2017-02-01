@@ -1,7 +1,4 @@
 const defaultsdeep = require('lodash.defaultsdeep')
-const isfunction = require('lodash.isfunction')
-const isobject = require('lodash.isobject')
-const isarray = require('lodash.isarray')
 
 const OPTIONS = {
   value: null,
@@ -14,9 +11,9 @@ const array2object = function (array, options, callback) {
   const parameters = [].slice.call(arguments)
   const last = parameters.pop()
 
-  callback = isfunction(last) ? last : doop
+  callback = last instanceof Function ? last : doop
+  array = Array.isArray(array) ? array : []
   options = defaultsdeep(options, OPTIONS)
-  array = isarray(array) ? array : []
 
   return callback(reduce(array, options.base, options.value))
 }

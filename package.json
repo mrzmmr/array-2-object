@@ -1,16 +1,15 @@
 {
   "name": "array-2-object",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "Returns a new object from a given array",
   "main": "index.js",
   "scripts": {
     "tape": "tape test/*.js",
-    "babel": "babel src -d .",
     "posttest": "npm run coverage",
-    "test": "npm run babel && nyc npm run tape",
-    "prepublish": "npm t && npm run clean && npm run babel",
+    "test": "nyc npm run tape",
+    "prepublish": "npm t && npm run clean",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
-    "clean": "rimraf index.js test coverage .nyc_output coverage.lcov"
+    "clean": "rimraf coverage .nyc_output coverage.lcov"
   },
   "repository": {
     "type": "git",
@@ -36,11 +35,8 @@
     ]
   },
   "dependencies": {
-    "lodash.defaultsdeep": "^4.6.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.22.2",
-    "babel-preset-env": "^1.1.8",
     "codecov": "^1.0.1",
     "nyc": "^10.1.2",
     "rimraf": "^2.5.4",

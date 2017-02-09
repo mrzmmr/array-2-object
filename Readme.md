@@ -122,16 +122,15 @@ npm test
 
 ## Dependencies
 
-- [lodash.defaultsdeep](https://github.com/lodash/lodash): The lodash method `_.defaultsDeep` exported as a module.
+None
 
 ## Dev Dependencies
 
-- [babel-cli](https://github.com/babel/babel/tree/master/packages): Babel command line.
-- [babel-preset-env](https://github.com/babel/babel-preset-env): A Babel preset for each environment.
 - [codecov](https://github.com/codecov/codecov-node): Uploading report to Codecov: https://codecov.io
 - [nyc](https://github.com/istanbuljs/nyc): the Istanbul command line interface
 - [rimraf](https://github.com/isaacs/rimraf): A deep deletion module for node (like `rm -rf`)
 - [tape](https://github.com/substack/tape): tap-producing test harness for node and browsers
+
 
 ## License
 

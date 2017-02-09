@@ -4,7 +4,7 @@
   "description": "Returns a new object from a given array",
   "main": "index.js",
   "scripts": {
-    "tape": "tape test/*.js",
+    "tape": "tape test.js",
     "posttest": "npm run coverage",
     "test": "nyc npm run tape",
     "prepublish": "npm t && npm run clean",

@@ -1,6 +1,8 @@
 'use strict'
 
-module.exports = function array2Object (array, options, callback) {
+module.exports = array2Object
+
+function array2Object (array, options, callback) {
   var defaultSettings
   var parameters
   var settings
@@ -28,7 +30,7 @@ module.exports = function array2Object (array, options, callback) {
 
   options = options || {}
 
-  settings = Object.assign(options, defaultSettings)
+  settings = Object.assign(defaultSettings, options)
 
   return callback(
     reduce(array, settings.base, settings.value)

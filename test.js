@@ -5,6 +5,8 @@ var array = [ 'one', 'two', 'three' ]
 var object = {three: 3}
 
 var expected1 = {}
+var expected2 = {one: null, two: null, three: null}
+var expected3 = {one: null, two: null, three: 3}
 
 tape(
   'Sync: Should return {}',
@@ -24,8 +26,6 @@ tape(
   }
 )
 
-var expected2 = {one: null, two: null, three: null}
-
 tape(
   'Sync: Should return {one: null, two: null, three: null}',
   function (test) {
@@ -43,8 +43,6 @@ tape(
     })
   }
 )
-
-var expected3 = {one: null, two: null, three: 3}
 
 tape(
   'Sync: Should return {one: null, two: null, three: 3}',

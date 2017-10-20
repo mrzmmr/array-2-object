@@ -34,11 +34,10 @@
       "env"
     ]
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "codecov": "^1.0.1",
-    "nyc": "^10.1.2",
+    "codecov": "^2.3.1",
+    "nyc": "^11.2.1",
     "rimraf": "^2.5.4",
     "tape": "^4.6.3"
   }
